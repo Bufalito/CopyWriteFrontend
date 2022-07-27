@@ -1,0 +1,1 @@
+export const GET_TEXTS = "GET_TEXTS"
