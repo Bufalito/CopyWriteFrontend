@@ -3,7 +3,7 @@ import { GET_TEXTS } from "./Types.jsx"
 
 export function getTexts() {
     return async function (dispatch) {
-        var json = await axios.get("http://localhost:3001")
+        var json = await axios.get("/")
         return dispatch({
             type: GET_TEXTS,
             payload: json.data
@@ -13,7 +13,7 @@ export function getTexts() {
 
 export function getText(value) {
     return async function () {
-        const response = await axios.get(`http://localhost:3001/iecho?text=${value}`)
+        const response = await axios.get(`/iecho?text=${value}`)
         return response
     }
 }
